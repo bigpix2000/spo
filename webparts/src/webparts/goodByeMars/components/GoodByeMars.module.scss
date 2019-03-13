@@ -37,6 +37,12 @@
     @include ms-fontColor-white;
   }
 
+  .specials {
+    @include ms-font-l;
+    color: $ms-color-yellow;
+  }
+
+
   .button {
     // Our button
     text-decoration: none;
