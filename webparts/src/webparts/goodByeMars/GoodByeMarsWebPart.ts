@@ -13,6 +13,7 @@ import { IGoodByeMarsProps } from './components/IGoodByeMarsProps';
 
 export interface IGoodByeMarsWebPartProps {
   description: string;
+  specials:string;
 }
 
 export default class GoodByeMarsWebPart extends BaseClientSideWebPart<IGoodByeMarsWebPartProps> {
@@ -21,7 +22,8 @@ export default class GoodByeMarsWebPart extends BaseClientSideWebPart<IGoodByeMa
     const element: React.ReactElement<IGoodByeMarsProps > = React.createElement(
       GoodByeMars,
       {
-        description: this.properties.description
+        description: this.properties.description,
+        specials: this.properties.specials
       }
     );
 
@@ -49,6 +51,9 @@ export default class GoodByeMarsWebPart extends BaseClientSideWebPart<IGoodByeMa
               groupFields: [
                 PropertyPaneTextField('description', {
                   label: strings.DescriptionFieldLabel
+                }),
+                PropertyPaneTextField('specials', {
+                  label: strings.SpecialsFieldLabel
                 })
               ]
             }
