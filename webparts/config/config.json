@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "good-bye-mars-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/goodByeMars/GoodByeMarsWebPart.js",
+          "manifest": "./src/webparts/goodByeMars/GoodByeMarsWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "GoodByeMarsWebPartStrings": "lib/webparts/goodByeMars/loc/{locale}.js"
+  }
+}
